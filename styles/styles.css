@@ -64,16 +64,50 @@ img {
 address {
   font-style: normal;
 }
-
-.contacts-item:hover,
+/* ================HOVER FOCUS =======================  */
 .nav-item:hover,
 .footer-contacts:hover,
-.contacts-item:focus,
 .nav-item:focus,
-.footer-contacts:focus {
+.footer-contacts:focus,
+.mail:focus,
+.phone:focus,
+.mail:hover,
+.phone:hover,
+.button-order:hover,
+.button-order:focus {
   color: var(--btn-bg-accent-color);
   cursor: pointer;
 }
+.button-social:hover {
+  background-color: var(--btn-bg-accent-color);
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-social:focus {
+  background-color: var(--btn-bg-accent-color);
+}
+.logo-client:hover {
+  color: var(--btn-bg-accent-color);
+  border: 1px solid var(--btn-bg-accent-color);
+  cursor: pointer;
+}
+.logo-client:focus {
+  color: var(--btn-bg-accent-color);
+}
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--btn-bg-accent-color);
+  color: var(--btn-text-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+/* ================HOVER FOCUS END=======================  */
 
 li > .accent-button {
   color: var(--btn-bg-accent-color);
@@ -156,14 +190,10 @@ li > .accent-button {
 }
 .contacts {
   display: flex;
-
+  align-items: center;
   gap: 50px;
 }
 .contacts-item {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -182,29 +212,18 @@ li > .accent-button {
   margin-right: 10px;
   fill: currentColor;
 }
-/* .mail::before {
-  display: inline-block;
-  margin-right: 10px;
-  content: "";
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/icons/envelope.svg);
+.mail {
+  padding: 32px 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.phone::before {
-  display: inline-block;
-  margin-right: 10px;
-  content: "";
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/icons/phone.svg);
-  color: var(--text-description-color);
+.phone {
+  padding: 32px 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.mail:focus,
-.phone:focus,
-.mail:hover,
-.phone:hover {
-  fill: currentColor;
-} */
 
 /* блок ГЕРОЙ =================================== */
 .hero {
@@ -266,14 +285,6 @@ li > .accent-button {
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-.button-order:hover {
-  background-color: var(--btn-bg-hover-color);
-  cursor: pointer;
-}
-.button-order:focus {
-  background-color: var(--btn-bg-hover-color);
-  cursor: pointer;
 }
 
 /* Наші особливості =========================================*/
@@ -354,6 +365,7 @@ li > .accent-button {
 }
 .wrap {
   padding: 30px 32px;
+  background-color: #ffffff;
 }
 .team-header {
   margin-bottom: 10px;
@@ -391,11 +403,6 @@ li > .accent-button {
   background-color: transparent;
   color: var(--text-description-color);
 }
-.button-social:hover {
-  background-color: var(--btn-bg-accent-color);
-  color: #ffffff;
-  cursor: pointer;
-}
 .svg-social {
   width: 20px;
   height: 20px;
@@ -406,25 +413,17 @@ li > .accent-button {
   display: flex;
 }
 .logo-client {
-  padding: 16px 32px;
+  display: inline-block;
+  padding: 14px 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--text-description-color);
 }
-.logo-client:not(:last-child) {
-  margin-right: auto;
+.logos-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 .svg-client {
-  display: inline-block;
-  width: 106px;
-  height: 60px;
   fill: currentColor;
-}
-.logo-client:hover,
-.logo-client:focus {
-  color: var(--btn-bg-accent-color);
-  border: 1px solid var(--btn-bg-accent-color);
-  cursor: pointer;
 }
 
 /* Підвал ===================================================*/
@@ -442,7 +441,6 @@ li > .accent-button {
   color: var(--logo-studio-light);
 }
 .address {
-  /* margin-top: 20px; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -462,6 +460,7 @@ li > .accent-button {
 }
 .button-footer {
   background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 .subscribe {
   align-self: flex-start;
@@ -477,14 +476,6 @@ li > .accent-button {
 }
 
 /* Стилі до сторінки Портфоліо  ============================*/
-.button-filter:hover,
-.button-filter:focus {
-  background-color: var(--btn-bg-hover-color);
-  color: var(--btn-text-accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
 .portfolio-main {
   background-color: var(--bg-head-color);
 }
@@ -519,8 +510,50 @@ li > .accent-button {
 }
 
 .project-item {
+  position: relative;
   flex-basis: calc(((100%-30px) - (2 * 30px)) / 3);
   background-color: var(--bg-head-color);
+}
+.img-project {
+  position: relative;
+}
+.img-project:hover::before {
+  opacity: 1;
+}
+.img-basketball {
+  position: relative;
+}
+.img-project::before {
+  position: absolute;
+  display: inline-block;
+  padding: 63px 24px;
+  content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--btn-text-accent-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.hover-basketball {
+  position: absolute;
+  display: inline-block;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--btn-text-accent-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.hover-basketball:hover {
+  opacity: 1;
 }
 .card-description {
   padding: 20px 24px;
@@ -542,4 +575,38 @@ li > .accent-button {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--text-description-color);
+}
+/* ====================модальне вікно====================== */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.modal > button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  min-width: 30px;
+  min-height: 30px;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  border-radius: 50%;
 }
