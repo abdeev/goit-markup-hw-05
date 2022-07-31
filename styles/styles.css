@@ -72,11 +72,13 @@ address {
 .mail:focus,
 .phone:focus,
 .mail:hover,
-.phone:hover,
-.button-order:hover,
-.button-order:focus {
+.phone:hover {
   color: var(--btn-bg-accent-color);
   cursor: pointer;
+}
+.button-order:hover,
+.button-order:focus {
+  background: var(--btn-bg-hover-color);
 }
 .button-social:hover {
   background-color: var(--btn-bg-accent-color);
