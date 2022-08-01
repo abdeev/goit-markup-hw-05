@@ -24,6 +24,7 @@
   --transition-time-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .body {
+  min-width: 1200px;
   font-family: var(--primary-font-family);
   color: var(--main-header-color);
   background-color: var(--bg-head-color);
@@ -77,37 +78,29 @@ address {
 .phone:hover {
   color: var(--btn-bg-accent-color);
   cursor: pointer;
-  transition: color var(--transition-time-and-func);
 }
 .button-order:hover,
 .button-order:focus {
   background-color: var(--btn-bg-hover-color);
-  transition: background-color var(--transition-time-and-func);
   cursor: pointer;
 }
 .button-social:hover {
   background-color: var(--btn-bg-accent-color);
   color: #ffffff;
   cursor: pointer;
-  transition: color var(--transition-time-and-func),
-    background-color var(--transition-time-and-func);
 }
 .button-social:focus {
   background-color: var(--btn-bg-accent-color);
   color: #ffffff;
-  transition: background-color var(--transition-time-and-func);
   outline: transparent;
 }
 .logo-client:hover {
   color: var(--btn-bg-accent-color);
   border: 1px solid var(--btn-bg-accent-color);
   cursor: pointer;
-  transition: color var(--transition-time-and-func),
-    border var(--transition-time-and-func);
 }
 .logo-client:focus {
   color: var(--btn-bg-accent-color);
-  transition: color var(--transition-time-and-func);
 }
 .button-filter:hover,
 .button-filter:focus {
@@ -116,8 +109,6 @@ address {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  transition: background-color var(--transition-time-and-func),
-    box-shadow var(--transition-time-and-func);
   outline: transparent;
 }
 .project-item:hover,
@@ -125,9 +116,6 @@ address {
   outline: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-  transition-property: box-shadow, translate;
 }
 /* ================HOVER FOCUS END=======================  */
 
@@ -145,7 +133,7 @@ li > .accent-button {
   content: "";
   width: 100%;
   border: 2px solid var(--btn-bg-accent-color);
-  transform: translateY(1vmax);
+  transform: translateY(29px);
   border-radius: 2px;
 }
 .container {
@@ -222,6 +210,7 @@ li > .accent-button {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--header-dark-color);
+  transition: color var(--transition-time-and-func);
 }
 .contacts {
   display: flex;
@@ -252,12 +241,14 @@ li > .accent-button {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: color var(--transition-time-and-func);
 }
 .phone {
   padding: 32px 0;
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: color var(--transition-time-and-func);
 }
 
 /* блок ГЕРОЙ =================================== */
@@ -301,6 +292,7 @@ li > .accent-button {
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-time-and-func);
 }
 
 /* Наші особливості =========================================*/
@@ -435,8 +427,9 @@ li > .accent-button {
   height: 44px;
   border: 0px;
   border-radius: 50%;
-  /* background-color: transparent; */
   color: var(--color-icon-grey);
+  transition: color var(--transition-time-and-func),
+    background-color var(--transition-time-and-func);
 }
 .svg-social {
   width: 20px;
@@ -453,6 +446,8 @@ li > .accent-button {
   border: 1px solid var(--color-icon-grey);
   border-radius: 4px;
   color: var(--color-icon-grey);
+  transition: color var(--transition-time-and-func),
+    border var(--transition-time-and-func);
 }
 .logos-list > li:not(:last-child) {
   margin-right: 30px;
@@ -492,6 +487,7 @@ li > .accent-button {
 .footer-contacts {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-time-and-func);
 }
 .button-footer {
   background-color: rgba(255, 255, 255, 0.1);
@@ -533,6 +529,8 @@ li > .accent-button {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.06em;
+  transition: background-color var(--transition-time-and-func),
+    box-shadow var(--transition-time-and-func);
 }
 .active-btn {
   background-color: var(--btn-bg-accent-color);
@@ -548,6 +546,8 @@ li > .accent-button {
   position: relative;
   flex-basis: calc(((100%-30px) - (2 * 30px)) / 3);
   background-color: var(--bg-head-color);
+  transition: box-shadow var(--transition-time-and-func),
+    translate var(--transition-time-and-func);
 }
 
 @keyframes slide-top {
@@ -580,7 +580,7 @@ li > .accent-button {
   transition: transform var(--transition-time-and-func);
 }
 .project-item:hover .overlay-project-description,
-.hover-project-description:focus {
+.project-item:focus .overlay-project-description {
   transform: translateY(0);
 }
 .card-description {
@@ -609,6 +609,7 @@ li > .accent-button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: rotateX(90deg);
 }
 .backdrop {
   position: fixed;
@@ -635,6 +636,7 @@ li > .accent-button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--body-color);
 }
+
 .close-round-button {
   position: absolute;
   right: 8px;
