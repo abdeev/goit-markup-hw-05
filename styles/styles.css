@@ -94,7 +94,9 @@ address {
 }
 .button-social:focus {
   background-color: var(--btn-bg-accent-color);
+  color: #ffffff;
   transition: background-color var(--transition-time-and-func);
+  outline: transparent;
 }
 .logo-client:hover {
   color: var(--btn-bg-accent-color);
@@ -116,10 +118,11 @@ address {
   cursor: pointer;
   transition: background-color var(--transition-time-and-func),
     box-shadow var(--transition-time-and-func);
+  outline: transparent;
 }
 .project-item:hover,
 .project-item:focus {
-  outline: none;
+  outline: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -549,11 +552,9 @@ li > .accent-button {
 
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
 }
@@ -562,7 +563,7 @@ li > .accent-button {
   position: relative;
   overflow: hidden;
 }
-.hover-project-description {
+.overlay-project-description {
   position: absolute;
   display: inline-block;
   padding: 63px 24px;
@@ -575,11 +576,12 @@ li > .accent-button {
   letter-spacing: 0.03em;
   color: var(--btn-text-accent-color);
   background-color: rgba(33, 150, 243, 0.9);
-  animation: slide-top var(--transition-time-and-func) forwards;
-}
-.hover-project-description:hover,
-.hover-project-description:focus {
   transform: translateY(100%);
+  transition: transform var(--transition-time-and-func);
+}
+.project-item:hover .overlay-project-description,
+.hover-project-description:focus {
+  transform: translateY(0);
 }
 .card-description {
   padding: 20px 24px;
