@@ -65,9 +65,9 @@ address {
   font-style: normal;
 }
 /* ================HOVER FOCUS =======================  */
-.nav-item:hover,
+.nav-link:hover,
 .footer-contacts:hover,
-.nav-item:focus,
+.nav-link:focus,
 .footer-contacts:focus,
 .mail:focus,
 .phone:focus,
@@ -138,6 +138,16 @@ address {
 li > .accent-button {
   color: var(--btn-bg-accent-color);
 }
+.nav-item {
+  display: flex;
+  align-content: center;
+}
+.accent-button::after {
+  display: block;
+  content: "";
+  border: 2px solid var(--btn-bg-accent-color);
+  border-radius: 2px;
+}
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -203,8 +213,7 @@ li > .accent-button {
   display: flex;
   gap: 50px;
 }
-.nav-item {
-  display: block;
+.nav-link {
   padding: 32px 0;
   text-decoration: none;
   align-content: center;
