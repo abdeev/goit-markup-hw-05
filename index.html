@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/style-portfolio.css" />
+    <!-- <link rel="stylesheet" href="./styles/style-portfolio.css" /> -->
   </head>
 
   <body class="body">
@@ -83,7 +83,7 @@
           <h1 class="hero-text-button">
             Еффективні рішення для вашого бізнесу
           </h1>
-          <button class="button-order" type="button">Замовити послугу</button>
+          <button class="button-order" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- наші особливості -->
@@ -170,23 +170,32 @@
             <li class="directions-item">
               <img
                 src="./images/our_work/desktop.jpg"
-                alt="Desktop applications"
+                alt="Розробка десктопних додатків"
                 width="370"
               />
+              <div class="directions-description">
+                <p>Десктопні додатки</p>
+              </div>
             </li>
             <li class="directions-item">
               <img
                 src="./images/our_work/ipad.jpg"
-                alt="Tablet applications"
+                alt="Розробка мобільних додатків"
                 width="370"
               />
+              <div class="directions-description">
+                <p>Мобільні додатки</p>
+              </div>
             </li>
             <li class="directions-item">
               <img
                 src="./images/our_work/phone.jpg"
-                alt="Smartphone applications"
+                alt="Розробка дизайну"
                 width="370"
               />
+              <div class="directions-description">
+                <p>Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -509,12 +518,12 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button"><svg width="11" height="11"><use href="./images/icons/sprite.svg#cross"></use>
+        <button class="close-round-button" type="button" data-modal-close><svg width="11" height="11"><use href="./images/icons/sprite.svg#cross"></use>
       </svg></button>
       </div>
     </div>
-    
+    <script src="./js/modal.js"></script>
   </body>
 </html>
