@@ -354,21 +354,22 @@ li > .accent-button {
 }
 .directions-item {
   position: relative;
+  display: flex;
   margin: 0px auto;
 }
 .directions-description {
   position: absolute;
   display: flex;
+  align-items: center;
+  justify-content: center;
   left: 0px;
   bottom: 0px;
   width: 100%;
+  height: calc(100% - (100% - 54px));
   min-height: 70px;
-  padding: 27px 82px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
-  align-items: center;
-  justify-content: center;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -609,7 +610,6 @@ li > .accent-button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: rotateX(90deg);
 }
 .backdrop {
   position: fixed;
@@ -623,6 +623,7 @@ li > .accent-button {
   transition: opacity var(--transition-time-and-func), visibility 250ms linear,
     transform var(--transition-time-and-func);
 }
+
 .modal {
   position: absolute;
   width: 528px;
@@ -637,6 +638,9 @@ li > .accent-button {
   background-color: var(--body-color);
 }
 
+.svg-close-cross {
+  fill: currentColor;
+}
 .close-round-button {
   position: absolute;
   right: 8px;
@@ -645,7 +649,48 @@ li > .accent-button {
   height: 30px;
   border: rgba(0, 0, 0, 0.1) solid 1px;
   border-radius: 50%;
+  background-color: var(--body-color);
+  transition: background-color var(--transition-time-and-func),
+    color var(--transition-time-and-func);
 }
+
 .close-round-button:hover {
   cursor: pointer;
+  background-color: var(--body-color);
+  color: var(--btn-bg-accent-color);
+}
+.modal-form > h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin: 0 auto;
+}
+.form-input {
+  padding: 11px 12px;
+}
+.user-comment {
+  padding: 20px;
+  resize: none;
+}
+.form-label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.margin-label {
+  margin-bottom: 4px;
+}
+.margin-input {
+  margin-bottom: 10px;
 }
